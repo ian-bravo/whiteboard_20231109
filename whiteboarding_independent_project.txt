@@ -7,7 +7,24 @@ Input: "Jasmine Ann Jones"
 
 Output: "Jasmine%20Ann%20Jones"
 
-Use split ' ', to get array of words. Instantiate a new array with join method '%20'.
+WITHOUT INCURSION:
+
+Use split ' ', to get array of words. Instantiate a new string with join method '%20'.
+
+
+const userInput = "Jasmine Ann Jones"
+
+function urlMaker (userInput) {
+
+	let words = userInput.split(' ');  //["Jasmine", "Ann", "Jones"]
+	let newURL = words.join('%20'); //"Jasmine%20Ann%20Jones"
+
+	return newURL;
+}
+
+WITH INCURSION:
+
+
 
 
 -------------------------------
@@ -19,6 +36,8 @@ Write an algorithm that removes duplicates from an array. Do not use a function 
 Input: [7, 9, "hi", 12, "hi", 7, 53]
 
 Output: [7, 9, "hi", 12, 53]
+
+Use forEach and if (userInput) .includes an element, then to .push the element into the empty array.
 
 
 ------------------------------
