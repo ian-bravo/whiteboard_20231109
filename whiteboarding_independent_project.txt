@@ -14,7 +14,7 @@ Use split ' ', to get array of words. Instantiate a new string with join method 
 
 const userInput = "Jasmine Ann Jones"
 
-urlMaker = function (userInput) {
+const urlMaker = function (userInput) {
 
 	let words = userInput.split(' ');  //["Jasmine", "Ann", "Jones"]
 	let newURL = words.join('%20'); //"Jasmine%20Ann%20Jones"
@@ -38,6 +38,18 @@ Input: [7, 9, "hi", 12, "hi", 7, 53]
 Output: [7, 9, "hi", 12, 53]
 
 Use forEach and if (userInput) .includes an element, then to .push the element into the empty array.
+
+OR
+
+let userInput = [7, 9, "hi", 12, "hi", 7, 53]
+const uniqueMaker = function(userInput) {
+	return [...new Set(userInput)];
+}
+
+
+
+
+
 
 
 ------------------------------
@@ -71,7 +83,7 @@ Output: true
 
 let userInput = "hello";
 
-someFx = function (userInput) {
+const someFx = function (userInput) {
 	for (var i=0; i<userInput.length; i++) {
 		if (userInput.indexOf(userInput[i]) != userInput.lastIndexOf(userInput[i])) { //if the first occurrence is not the last occurrence then it is not unique (false)
 			return false; //meaning it repeats
@@ -87,7 +99,7 @@ someFx = function (userInput) {
 Q5:Array Sorting~~~~~~~~~~~~~~~~~~~~~~~
 Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms — take the time to read about the following:
 
-Quick sort
+Quick sort <----
 Merge sort
 Heap sort
 Insertion sort
@@ -99,6 +111,26 @@ You may implement any of the above algorithms (or your own) to solve the problem
 Input: [9, 2, 7, 12]
 
 Output: [2, 7, 9, 12]
+
+const quickSort = function(userInput) {
+  if (userInput.length <= 1) {
+    return userInput;
+  }
+
+  let start = userInput[0];
+  let leftUserInput = [];
+  let rightUserInput = [];
+
+  for (let i = 1; i < userInput.length; i++) {
+    if (userInput[i] < start) {
+      leftUserInput.push(userInput[i]);
+    } else {
+      rightUserInput.push(userInput[i]);
+    }
+  }
+
+  return [...quickSort(leftUserInput), start, ...quickSort(rightUserInput)];
+};
 
 
 
