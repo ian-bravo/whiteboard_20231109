@@ -1,3 +1,41 @@
+INTERVIEW PROMPT Q4:
+
+prompt:
+
+Input: "hello"
+Output: false
+
+Output: "copyright"
+Output: true
+
+Input: "hi paul zx" -> ["hi", "paul", "zx"] -> .join -> "hipaulzx"
+Output: false -> want true
+
+Edge cases:
+spaces
+
+to see ifinput any reoccurring elements, false.
+for loop along if. 
+
+let userInput = "hello"
+
+someFx = function(userInput) {
+  for (int i=0; i<userInput.length; i++) {
+    if (userInput.indexOf(userInput[i] !=  //if the first occurance
+    userInput.lastIndexOf(userInput[i])) {  //is NOT the last occurance
+      return false //means repeating    //it is NOT unique
+      }
+    }
+    return true; //if the first occurance is also the same as last.
+  }
+  
+
+
+
+
+-------------------------------------------------------------------
+
+
 Q1: Turning Strings to URLs~~~~~~~~~~~~~~~~
 URLs cannot have spaces. Instead, all spaces in a string are replaced with %20. Write an algorithm that replaces all spaces in a string with %20.
 
